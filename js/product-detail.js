@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Get plant data from localStorage
+    // Сначала проверяем URL параметры
+    const urlParams = new URLSearchParams(window.location.search);
+    const plantId = urlParams.get('id');
+    
+    if (plantId) {
+        // Если есть ID в URL, используем его для поиска растения
+        const plant = plants[parseInt(plantId)];
+        if (plant) {
+            displayPlantDetails(plant);
+            return;
+        }
+    }
+    
+    // Если нет ID в URL или растение не найдено, проверяем localStorage
     const plantData = localStorage.getItem('selectedPlant');
     if (plantData) {
         const plant = JSON.parse(plantData);

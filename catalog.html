@@ -12,23 +12,29 @@
 <body>
     <header>
         <div class="container">
-            <div>
+            <div class="logo">
                 <h1>Greenhook</h1>
             </div>
-            <div>
-                <nav>
-                    <a href="index.html">Главная</a>
-                    <a href="catalog.html" class="active">Каталог</a>
-                    <a>Уход</a>
-                    <a>О нас</a>
-                </nav>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Уход</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="#"><img src="img/vk-social-network-logo.png" alt="VK"></a>
+                <a href="#"><img src="img/telegram-logo.png" alt="Telegram"></a>
             </div>
-            <div>
-                <img src="img/vk-social-network-logo.png">
-                <img src="img/telegram-logo.png">
-            </div>
+            <button class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
 
     <main>
         <div class="breadcrumbs">
@@ -65,27 +71,40 @@
             <a href="#">2</a>
         </div>
     </main>
-
     <footer>
-        <div class="container_footer">
-            <div>
+        <div class="container">
+            <div class="footer-section">
                 <h3>Greennook</h3>
                 <p>Мы помогаем вам найти идеальные растения для вашего дома</p>
-            </div>
-            <div>
-                <h3>Адрес для GreenNook:</h3>
-                <p>Москва, ул. Тверская, д. 12, офис 34, Россия. Понедельник — Пятница: 09:00 — 18:00Суббота, Воскресенье: выходные.</p>
-            </div>
-            <div>
-                <h3>Контакты</h3>
-                <p>+8 989 898 89 89 Greennook@gmail.com</p>
-            </div>
-            <div>
-                <div>
-                    <img src="img/vk-social-network-logo.png">
-                    <img src="img/telegram-logo.png">
+                <div class="social-links">
+                    <a href="#"><img src="img/vk-social-network-logo.png" alt="VK"></a>
+                    <a href="#"><img src="img/telegram-logo.png" alt="Telegram"></a>
                 </div>
-                <p> 2024 GreenNook. Все права защищены.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Уход</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Адрес</h3>
+                <ul>
+                    <li>Москва, ул. Тверская, д. 12, офис 34</li>
+                    <li>Пн-Пт: 09:00 — 18:00</li>
+                    <li>Сб-Вс: выходные</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <ul>
+                    <li>Телефон: +8 989 898 89 89</li>
+                    <li>Email: Greennook@gmail.com</li>
+                </ul>
+                <p class="copyright"> 2024 GreenNook. Все права защищены.</p>
             </div>
         </div>
     </footer>

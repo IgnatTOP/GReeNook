@@ -372,7 +372,7 @@ footer {
     background-color: $color-text;
     padding: 40px 0;
     margin-top: 60px;
-
+color: $color-accent;
     .container {
         max-width: 1440px;
         width: 90%;
@@ -461,8 +461,7 @@ footer {
 }
 
 header {
-    background-color: $color-white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: $color-background;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -947,8 +946,6 @@ header {
         gap: 12px; // Отступы между элементами карточки
         transition: transform 0.2s ease-in-out; // Анимация перемещения карточки
         animation: fadeInUp 1s ease-in-out; // Анимация появления карточки
-        background-color: $color-white; // Цвет фона карточки
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Тень карточки
         height: fit-content; // Высота карточки
         width: 100%; // Ширина карточки
 
@@ -1713,6 +1710,7 @@ header {
         height: 1000px;
     }
 }
+
 
 
 @media (max-width: 480px) {
