@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenNook - Описание растения</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Greenhook</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Уход</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="#"><img src="img/vk-social-network-logo.png" alt="VK"></a>
+                <a href="#"><img src="img/telegram-logo.png" alt="Telegram"></a>
+            </div>
+            <button class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumbs">
+            <a href="/">Главное</a> /
+            <a href="/catalog.html">Каталог</a> /
+            <span id="currentPlant">Растение</span>
+        </div>
+
+        <div class="product-detail">
+            <div class="product-image">
+                <img id="plantImage" src="" alt="">
+            </div>
+            <div class="product-info">
+                <h1 id="plantNameRu"></h1>
+                <h2 id="plantNameEn" class="latin-name"></h2>
+                
+                <div class="description">
+                    <p id="plantDescription"></p>
+                </div>
+
+                <div class="care-details">
+                    <div class="care-section">
+                        <h3>Освещенность</h3>
+                        <p id="lightingInfo"></p>
+                    </div>
+
+                    <div class="care-section">
+                        <h3>Темпиратурный режим</h3>
+                        <p id="temperatureInfo"></p>
+                    </div>
+
+                    <div class="care-section">
+                        <h3>Полив</h3>
+                        <p id="wateringInfo"></p>
+                    </div>
+
+                    <div class="care-section">
+                        <h3>Уход</h3>
+                        <p id="careInfo"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Greennook</h3>
+                <p>Мы помогаем вам найти идеальные растения для вашего дома</p>
+                <div class="social-links">
+                    <a href="#"><img src="img/vk-social-network-logo.png" alt="VK"></a>
+                    <a href="#"><img src="img/telegram-logo.png" alt="Telegram"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Уход</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Адрес</h3>
+                <ul>
+                    <li>Москва, ул. Тверская, д. 12, офис 34</li>
+                    <li>Пн-Пт: 09:00 — 18:00</li>
+                    <li>Сб-Вс: выходные</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <ul>
+                    <li>Телефон: +8 989 898 89 89</li>
+                    <li>Email: Greennook@gmail.com</li>
+                </ul>
+                <p class="copyright"> 2024 GreenNook. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>

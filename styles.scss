@@ -1,0 +1,1752 @@
+// Variables
+$font-primary: 'Spline Sans', sans-serif; // Основной шрифт
+$font-secondary: 'Amatic SC', cursive; // Вторичный шрифт
+$font-three: 'Abhaya Libre', cursive; // Третий шрифт
+
+$color-background: #DCD1CB; // Цвет фона
+$color-text: #5F5148; // Основной цвет текста
+$color-text-light: #736C64; // Светлый цвет текста
+$color-white: #FFFFFF; // Белый цвет
+$color-accent: #8D8582; // Акцентный цвет
+$color-accent-dark: #6B5F51; // Темный акцентный цвет
+$color-hero-bg: #E1DCD9; // Цвет фона для героического блока
+$color-compositions-bg: #DDD5D1; // Цвет фона для блока композиций
+$color-footer-link: #E1DCD9; // Цвет ссылок в футере
+
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Amatic+SC:wght@400;700&family=Spline+Sans:wght@300..700&display=swap'); // Подключение шрифтов
+
+body {
+    background-color: $color-hero-bg; // Цвет фона для body
+    font-family: $font-primary; // Основной шрифт для body
+    margin: 0; // Убираем отступы
+    padding: 0; // Убираем отступы
+
+    section {
+        width: 90%; // Ширина секции
+        max-width: 1440px; // Максимальная ширина секции
+        margin: 0 auto; // Центрирование секции
+    }
+
+    button {
+        color: $color-white; // Цвет текста кнопки
+        border-radius: 10px; // Скругление углов кнопки
+        padding: 12px 32px; // Внутренние отступы кнопки
+        background-color: $color-text; // Цвет фона кнопки
+        font-size: 24px; // Размер шрифта кнопки
+        transition: background-color 0.3s ease; // Анимация смены цвета фона кнопки
+
+        &:hover {
+            background-color: $color-accent-dark; // Цвет фона кнопки при наведении
+        }
+    }
+
+    .one_block {
+        background: url('img/paporotnik.png') no-repeat right bottom / 800px, $color-background;
+        min-height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 0px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .main_container {
+            position: relative;
+            z-index: 2;
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            div {
+                max-width: 800px;
+
+                h1 {
+                    font-family: $font-secondary;
+                    color: $color-accent-dark;
+                    font-size: 72px;
+                    font-weight: 700;
+                    letter-spacing: 1.92px;
+                    margin: 0 0 30px 0;
+                    line-height: 1.2;
+                    animation: slideInLeft 1s ease-in-out;
+                }
+
+                h2 {
+                    color: $color-accent-dark;
+                    font-size: 22px;
+                    font-weight: 400;
+                    letter-spacing: 0.64px;
+                    text-transform: uppercase;
+                    margin: 0 0 40px 0;
+                    line-height: 1.5;
+                    animation: slideInRight 1s ease-in-out;
+                }
+            }
+
+            button {
+                display: inline-block;
+                padding: 15px 40px;
+                font-size: 20px;
+                animation: fadeIn 1s ease-in-out;
+            }
+        }
+    }
+
+    .two_block {
+        max-width: 1440px; // Максимальная ширина блока
+        width: 90%; // Ширина блока
+        margin: 0 auto; // Центрирование блока
+        animation: fadeIn 2s ease-in-out; // Анимация появления блока
+
+        h1 {
+            font-family: $font-secondary; // Шрифт заголовка
+            color: $color-accent-dark; // Цвет заголовка
+            font-size: 64px; // Размер шрифта заголовка
+            font-weight: 700; // Толщина шрифта заголовка
+            letter-spacing: 1.28px; // Межбуквенный интервал заголовка
+            text-transform: uppercase; // Заглавные буквы
+            animation: slideInLeft 1s ease-in-out; // Анимация появления заголовка
+        }
+
+        .container_card {
+            display: flex; // Флексбокс для карточек
+            gap: 50px; // Отступы между карточками
+            justify-content: space-between; // Распределение карточек по ширине
+            animation: fadeInUp 1s ease-in-out; // Анимация появления контейнера карточек
+
+            .card {
+                .card_img {
+                    background-color: $color-background; // Цвет фона изображения
+                    padding: 10px 15px; // Внутренние отступы изображения
+                    border-radius: 10px; // Скругление углов изображения
+                    height: 400px; // Высота изображения
+                    animation: zoomIn 1s ease-in-out; // Анимация появления изображения
+
+                    img {
+                        width: 100%; // Ширина изображения
+                        height: 100%; // Высота изображения
+                        object-fit: cover; // Масштабирование изображения
+                    }
+                }
+
+                .card_desc {
+                    div {
+                        width: 250px; // Ширина блока описания
+                        height: 160px; // Высота блока описания
+
+                        h2 {
+                            color: $color-text; // Цвет заголовка описания
+                            animation: fadeInUp 1s ease-in-out; // Анимация появления заголовка описания
+                        }
+
+                        p {
+                            color: $color-accent; // Цвет текста описания
+                            animation: fadeInUp 1s ease-in-out; // Анимация появления текста описания
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .three_block {
+        margin: 150px 0; // Отступы сверху и снизу
+        background-color: $color-background; // Цвет фона блока
+        animation: fadeIn 2s ease-in-out; // Анимация появления блока
+
+        .container_compo {
+            width: 90%; // Ширина контейнера
+            max-width: 1440px; // Максимальная ширина контейнера
+            margin: 0 auto; // Центрирование контейнера
+            display: flex; // Флексбокс для содержимого
+            justify-content: space-between; // Распределение содержимого по ширине
+            align-items: center; // Центрирование содержимого по вертикали
+            padding: 84px 0; // Внутренние отступы контейнера
+            gap: 20px; // Отступы между элементами
+
+            div {
+                flex: 1; // Гибкость элемента
+
+                div {
+                    h1 {
+                        color: $color-accent-dark; // Цвет заголовка
+                        font-family: $font-secondary; // Шрифт заголовка
+                        font-size: 75px; // Размер шрифта заголовка
+                        font-weight: 700; // Толщина шрифта заголовка
+                        letter-spacing: 1.5px; // Межбуквенный интервал заголовка
+                        text-transform: uppercase; // Заглавные буквы
+                        margin: 0; // Убираем отступы
+                        animation: slideInLeft 1s ease-in-out; // Анимация появления заголовка
+                    }
+
+                    h2 {
+                        color: $color-accent; // Цвет подзаголовка
+                        font-size: 24px; // Размер шрифта подзаголовка
+                        font-weight: 400; // Толщина шрифта подзаголовка
+                        letter-spacing: 0.64px; // Межбуквенный интервал подзаголовка
+                        text-transform: uppercase; // Заглавные буквы
+                        animation: slideInRight 1s ease-in-out; // Анимация появления подзаголовка
+                    }
+                }
+
+                button {
+                    margin: 20px 0; // Отступы кнопки
+                    animation: zoomIn 1s ease-in-out; // Анимация появления кнопки
+                }
+            }
+        }
+    }
+
+    .w-full {
+        width: 100%; // Ширина блока
+    }
+
+    .five_block {
+        background: url('img/still-life-with-cactus-plant.png') no-repeat 90% bottom / 1250px, $color-background; // Фон блока с изображением
+        margin: 100px 0; // Отступы сверху и снизу
+        height: 750px; // Высота блока
+        animation: fadeIn 2s ease-in-out; // Анимация появления блока
+
+        .container_cactus {
+            height: 200px; // Высота контейнера
+            display: flex; // Флексбокс для содержимого
+            align-items: flex-start; // Выравнивание по началу
+            flex-direction: column; // Направление флексбокса
+            width: 90%; // Ширина контейнера
+            max-width: 1440px; // Максимальная ширина контейнера
+            margin: 0 auto; // Центрирование контейнера
+
+            h1 {
+                font-family: $font-secondary; // Шрифт заголовка
+                color: $color-accent-dark; // Цвет заголовка
+                font-size: 120px; // Размер шрифта заголовка
+                font-weight: 700; // Толщина шрифта заголовка
+                letter-spacing: 2.4px; // Межбуквенный интервал заголовка
+                text-transform: uppercase; // Заглавные буквы
+                animation: slideInLeft 1s ease-in-out; // Анимация появления заголовка
+            }
+        }
+
+        .container_card_why {
+            display: flex; // Флексбокс для карточек
+            justify-content: space-between; // Распределение карточек по ширине
+            width: 70%; // Ширина контейнера карточек
+            gap: 20px; // Отступы между карточками
+
+            .card_why {
+                height: 400px; // Высота карточки
+                display: flex; // Флексбокс для содержимого карточки
+                align-items: center; // Центрирование содержимого по вертикали
+                flex-direction: column; // Направление флексбокса
+                justify-content: space-between; // Распределение содержимого по высоте
+                animation: fadeInUp 1s ease-in-out; // Анимация появления карточки
+
+                img {
+                    width: 200px; // Ширина изображения
+                    height: 250px; // Высота изображения
+                    object-fit: cover; // Масштабирование изображения
+                    animation: zoomIn 1s ease-in-out; // Анимация появления изображения
+                }
+
+                p {
+                    color: $color-accent; // Цвет текста
+                    font-size: 24px; // Размер шрифта текста
+                    font-weight: 400; // Толщина шрифта текста
+                    letter-spacing: 0.64px; // Межбуквенный интервал текста
+                    text-transform: uppercase; // Заглавные буквы
+                    animation: fadeInUp 1s ease-in-out; // Анимация появления текста
+                }
+            }
+        }
+    }
+
+    .six_block {
+        padding: 0 0 100px 0; // Внутренние отступы блока
+        background-color: $color-hero-bg; // Цвет фона блока
+        animation: fadeIn 2s ease-in-out; // Анимация появления блока
+
+        .container {
+            margin: 0 auto; // Центрирование контейнера
+            max-width: 1440px; // Максимальная ширина контейнера
+            padding: 0 15px; // Внутренние отступы контейнера
+        }
+
+        .slider-header {
+            max-width: 1120px; // Максимальная ширина заголовка слайдера
+            margin: 0 auto; // Центрирование заголовка слайдера
+            text-align: left; // Выравнивание текста по левому краю
+            margin-bottom: 30px; // Отступ снизу
+
+            h1 {
+                font-family: $font-secondary; // Шрифт заголовка
+                color: $color-accent-dark; // Цвет заголовка
+                font-size: 64px; // Размер шрифта заголовка
+                font-weight: 700; // Толщина шрифта заголовка
+                letter-spacing: 1.28px; // Межбуквенный интервал заголовка
+                text-transform: uppercase; // Заглавные буквы
+                animation: slideInLeft 1s ease-in-out; // Анимация появления заголовка
+            }
+        }
+
+        .slider-container {
+            position: relative; // Позиционирование контейнера слайдера
+            display: flex; // Флексбокс для слайдера
+            align-items: center; // Центрирование содержимого по вертикали
+            gap: 20px; // Отступы между элементами
+        }
+
+        .slider-wrapper {
+            width: 100%; // Ширина обертки слайдера
+            overflow: hidden; // Скрытие переполнения
+        }
+
+        .slider-track {
+            display: flex; // Флексбокс для трека слайдера
+            transition: transform 0.3s ease-in-out; // Анимация перемещения трека
+        }
+
+        .slider-slide {
+            min-width: calc(33.333% - 20px); // Минимальная ширина слайда
+            padding: 0 10px; // Внутренние отступы слайда
+            box-sizing: border-box; // Модель расчета размеров
+            animation: fadeInUp 1s ease-in-out; // Анимация появления слайда
+
+            img {
+                width: 100%; // Ширина изображения
+                height: 700px; // Высота изображения
+                object-fit: cover; // Масштабирование изображения
+            }
+        }
+
+        .slider-button {
+            border: none; // Убираем границу кнопки
+            color: $color-white; // Цвет текста кнопки
+            width: 20px; // Ширина кнопки
+            height: 60px; // Высота кнопки
+            border-radius: 50%; // Скругление углов кнопки
+            cursor: pointer; // Курсор при наведении
+            display: flex; // Флексбокс для кнопки
+            align-items: center; // Центрирование содержимого по вертикали
+            justify-content: center; // Центрирование содержимого по горизонтали
+            font-size: 18px; // Размер шрифта кнопки
+            transition: background-color 0.3s; // Анимация смены цвета фона кнопки
+            animation: fadeIn 1s ease-in-out; // Анимация появления кнопки
+
+            &:hover {
+                background: $color-accent-dark; // Цвет фона кнопки при наведении
+            }
+
+            &:disabled {
+                background: #ccc; // Цвет фона кнопки при отключении
+                cursor: not-allowed; // Курсор при отключении
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .slider-slide {
+                min-width: calc(50% - 20px); // Минимальная ширина слайда для экранов до 1024px
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider-slide {
+                min-width: calc(100% - 20px); // Минимальная ширина слайда для экранов до 768px
+            }
+        }
+    }
+
+
+footer {
+    background-color: $color-text;
+    padding: 40px 0;
+    margin-top: 60px;
+
+    .container {
+        max-width: 1440px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+
+            h3 {
+                color: $color-white;
+                font-size: 24px;
+                margin-bottom: 20px;
+                font-family: $font-secondary;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        color: $color-footer-link;
+                        text-decoration: none;
+                        font-size: 16px;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+
+            .social-links {
+                display: flex;
+                gap: 15px;
+
+                a {
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        transition: opacity 0.3s ease;
+
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 0;
+        
+        .container {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+
+            .footer-section {
+                min-width: 100%;
+
+                .social-links {
+                    justify-content: center;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+header {
+    background-color: $color-white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 5%;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        .logo {
+            h1 {
+                font-family: $font-secondary;
+                color: $color-text;
+                font-size: 32px;
+                margin: 0;
+            }
+        }
+
+        nav {
+            ul {
+                display: flex;
+                gap: 30px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li a {
+                    color: $color-text;
+                    text-decoration: none;
+                    font-size: 18px;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: $color-accent-dark;
+                    }
+                }
+            }
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+
+            img {
+                width: 24px;
+                height: 24px;
+                transition: opacity 0.3s ease;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1000;
+
+            span {
+                display: block;
+                width: 25px;
+                height: 2px;
+                background-color: $color-text;
+                margin: 5px 0;
+                transition: all 0.3s ease;
+            }
+
+            &.active {
+                span:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                span:nth-child(3) {
+                    transform: rotate(-45deg) translate(7px, -7px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        section {
+            width: 95%; // Ширина секции для экранов до 1024px
+        }
+    }
+
+    header {
+        .container {
+            flex-wrap: wrap; // Перенос элементов на новую строку
+            gap: 10px; // Отступы между элементами
+
+            div {
+                flex-direction: column; // Направление флексбокса
+                align-items: center; // Центрирование содержимого по горизонтали
+            }
+        }
+
+        nav {
+            gap: 10px; // Отступы между элементами
+
+            a {
+                font-size: 14px; // Размер шрифта ссылок
+            }
+        }
+
+        img {
+            width: 24px; // Ширина изображения
+            height: 24px; // Высота изображения
+        }
+    }
+
+    .one_block {
+        height: auto; // Высота блока
+        background-size: contain; // Масштабирование фона
+
+        .main_container {
+            div {
+                h1 {
+                    font-size: 48px; // Размер шрифта заголовка
+                }
+
+                h2 {
+                    font-size: 18px; // Размер шрифта подзаголовка
+                }
+            }
+
+            button {
+                font-size: 18px; // Размер шрифта кнопки
+                padding: 8px 16px; // Внутренние отступы кнопки
+            }
+        }
+    }
+
+    .two_block,
+    .three_block {
+        h1 {
+            font-size: 32px; // Размер шрифта заголовка
+        }
+
+        .container_card {
+            flex-wrap: wrap; // Перенос элементов на новую строку
+            gap: 20px; // Отступы между элементами
+
+            .card {
+                .card_img {
+                    height: 250px; // Высота изображения
+                }
+
+                .card_desc {
+                    div {
+                        h2 {
+                            font-size: 18px; // Размер шрифта заголовка описания
+                        }
+
+                        p {
+                            font-size: 14px; // Размер шрифта текста описания
+                        }
+                    }
+
+                    button {
+                        font-size: 16px; // Размер шрифта кнопки
+                    }
+                }
+            }
+        }
+    }
+
+    .three_block {
+        .container_compo {
+            flex-wrap: wrap; // Перенос элементов на новую строку
+            gap: 20px; // Отступы между элементами
+
+            div {
+                h1 {
+                    font-size: 48px; // Размер шрифта заголовка
+                }
+
+                h2 {
+                    font-size: 18px; // Размер шрифта подзаголовка
+                }
+            }
+        }
+    }
+
+    .five_block {
+        height: 1200px; // Высота блока
+        background-size: 100%; // Масштабирование фона
+
+        .container_cactus {
+            h1 {
+                font-size: 48px; // Размер шрифта заголовка
+            }
+            height: 100%;
+
+            .container_card_why {
+                width: 100%;
+                flex-direction: column;
+                gap: 10px; // Отступы между элементами
+                height: auto;
+                .card_why {
+                    img {
+                        width: 150px; // Ширина изображения
+                        height: 250px; // Высота изображения
+                    }
+                    height: 250px;
+                    p {
+                        font-size: 18px; // Размер шрифта текста
+                    }
+                }
+            }
+        }
+    }
+
+    .six_block {
+        .slider-slide {
+            min-width: calc(50% - 20px); // Минимальная ширина слайда
+
+            img {
+                height: 400px; // Высота изображения
+            }
+        }
+    }
+
+    footer {
+        .container {
+            flex-wrap: wrap; // Перенос элементов на новую строку
+            gap: 20px; // Отступы между элементами
+
+            > div {
+                text-align: center; // Центрирование текста
+
+                h3 {
+                    font-size: 16px; // Размер шрифта заголовка
+                }
+
+                p {
+                    font-size: 14px; // Размер шрифта текста
+                }
+
+                img {
+                    width: 20px; // Ширина изображения
+                    height: 20px; // Высота изображения
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        .container {
+            div {
+                img {
+                    width: 20px; // Ширина изображения
+                    height: 20px; // Высота изображения
+                }
+            }
+        }
+    }
+
+    .one_block {
+        height: auto;
+        padding: 60px 0;
+        background-size: 300px;
+        background-position: right bottom;
+        
+        .main_container {
+            div {
+                h1 {
+                    font-size: 48px;
+                    text-align: center;
+                }
+                
+                h2 {
+                    font-size: 18px;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+                
+                button {
+                    display: block;
+                    margin: 0 auto;
+                    font-size: 20px;
+                    padding: 10px 24px;
+                }
+            }
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 0;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 20px;
+
+    button {
+        background-color: $color-accent;
+        color: $color-white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: $font-primary;
+        font-size: 16px;
+        transition: background-color 0.2s;
+        min-width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: $color-accent-dark;
+        }
+
+        &.active {
+            background-color: $color-text;
+        }
+
+        &:disabled {
+            background-color: $color-text-light;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pagination {
+        gap: 8px;
+        margin: 30px 0;
+        
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+            min-width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        gap: 6px;
+        margin: 20px 0;
+        
+        button {
+            padding: 6px 12px;
+            font-size: 13px;
+            min-width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+// Catalog Page Styles
+.breadcrumbs {
+    width: 90%; // Ширина контейнера
+    max-width: 1440px; // Максимальная ширина контейнера
+    margin: 20px auto; // Отступы контейнера
+    font-family: $font-primary; // Шрифт текста
+    color: $color-text; // Цвет текста
+    animation: fadeInUp 1s ease-in-out; // Анимация появления контейнера
+
+    a {
+        color: $color-text; // Цвет ссылок
+        text-decoration: none; // Убираем подчеркивание ссылок
+
+        &:hover {
+            color: $color-accent-dark; // Цвет ссылок при наведении
+        }
+    }
+
+    span {
+        color: $color-accent; // Цвет текста
+    }
+}
+
+.page-title {
+    width: 90%; // Ширина контейнера
+    max-width: 1440px; // Максимальная ширина контейнера
+    margin: 30px auto; // Отступы контейнера
+    font-family: $font-secondary; // Шрифт заголовка
+    color: $color-accent-dark; // Цвет заголовка
+    font-size: 64px; // Размер шрифта заголовка
+    font-weight: 700; // Толщина шрифта заголовка
+    letter-spacing: 1.28px; // Межбуквенный интервал заголовка
+    text-transform: uppercase; // Заглавные буквы
+    animation: slideInLeft 1s ease-in-out; // Анимация появления заголовка
+}
+
+.catalog-container {
+    display: flex; // Флексбокс для контейнера каталога
+    gap: 30px; // Отступы между элементами
+    padding: 20px; // Внутренние отступы контейнера
+    max-width: 1440px; // Максимальная ширина контейнера
+    margin: 0 auto; // Центрирование контейнера
+
+    .sidebar {
+        width: 250px; // Ширина сайдбара
+        flex-shrink: 0; // Запрет сжатия сайдбара
+        border: solid 1px $color-accent; // Граница сайдбара
+
+        .category-group {
+            border-radius: 10px; // Скругление углов группы категорий
+            padding: 20px; // Внутренние отступы группы категорий
+
+            .category-header {
+                color: $color-text; // Цвет заголовка категории
+                font-size: 18px; // Размер шрифта заголовка категории
+                font-weight: 500; // Толщина шрифта заголовка категории
+                margin-bottom: 15px; // Отступ снизу заголовка категории
+                display: block; // Блочное отображение заголовка категории
+                animation: fadeInUp 1s ease-in-out; // Анимация появления заголовка категории
+            }
+
+            ul {
+                list-style: none; // Убираем маркеры списка
+                padding: 0; // Убираем отступы списка
+                margin: 0; // Убираем отступы списка
+
+                li {
+                    color: $color-text; // Цвет элемента списка
+                    font-size: 14px; // Размер шрифта элемента списка
+                    padding: 8px 0; // Внутренние отступы элемента списка
+                    cursor: pointer; // Курсор при наведении
+                    transition: all 0.3s ease; // Анимация перехода
+                    text-transform: uppercase; // Заглавные буквы
+                    letter-spacing: 0.5px; // Межбуквенный интервал элемента списка
+                    animation: fadeInUp 1s ease-in-out; // Анимация появления элемента списка
+
+                    &:hover {
+                        color: $color-accent-dark; // Цвет элемента списка при наведении
+                    }
+
+                    &.active {
+                        color: $color-accent-dark; // Цвет активного элемента списка
+                        font-weight: 500; // Толщина шрифта активного элемента списка
+                    }
+                }
+            }
+        }
+    }
+
+    .catalog-content {
+        flex: 1; // Гибкость контента каталога
+        display: flex; // Флексбокс для контента каталога
+        flex-direction: column; // Направление флексбокса
+    }
+}
+
+.catalog-grid {
+    display: grid; // Грид для карточек каталога
+    grid-template-columns: repeat(3, 1fr); // Количество колонок
+    gap: 30px; // Отступы между карточками
+    width: 100%; // Ширина
+
+    .plant-card {
+        border-radius: 12px; // Скругление углов карточки
+        padding: 16px; // Внутренние отступы карточки
+        display: flex; // Флексбокс для содержимого карточки
+        flex-direction: column; // Направление флексбокса
+        align-items: center; // Центрирование содержимого по горизонтали
+        gap: 12px; // Отступы между элементами карточки
+        transition: transform 0.2s ease-in-out; // Анимация перемещения карточки
+        animation: fadeInUp 1s ease-in-out; // Анимация появления карточки
+        background-color: $color-white; // Цвет фона карточки
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Тень карточки
+        height: fit-content; // Высота карточки
+        width: 100%; // Ширина карточки
+
+        .img_container {
+            height: 300px; // Высота контейнера изображения
+            width: 100%; // Ширина контейнера изображения
+            background-color: $color-background; // Цвет фона контейнера изображения
+            padding: 5px; // Внутренние отступы контейнера изображения
+            border-radius: 10px; // Скругление углов контейнера изображения
+            overflow: hidden; // Скрытие переполнения
+            position: relative; // Позиционирование контейнера изображения
+
+            img {
+                height: 100%; // Высота изображения
+                width: 100%; // Ширина изображения
+                object-fit: cover; // Масштабирование изображения
+                object-position: center; // Позиционирование изображения
+            }
+        }
+
+        .container_pland__desk {
+            display: flex; // Флексбокс для описания карточки
+            flex-direction: column; // Направление флексбокса
+            gap: 10px; // Отступы между элементами описания
+            align-items: start; // Выравнивание по началу
+            text-align: left; // Выравнивание текста по левому краю
+            width: 100%; // Ширина описания
+            padding: 10px 0; // Внутренние отступы описания
+        }
+
+        h3 {
+            font-family: $font-secondary; // Шрифт заголовка карточки
+            color: $color-text; // Цвет заголовка карточки
+            font-size: 1.25rem; // Размер шрифта заголовка карточки
+            margin: 0; // Убираем отступы
+            width: 100%; // Ширина заголовка
+            overflow: hidden; // Скрытие переполнения
+            text-overflow: ellipsis; // Обрезка текста
+            white-space: nowrap; // Запрет переноса строк
+        }
+
+        .english-name {
+            color: $color-text-light; // Цвет английского названия
+            font-size: 0.9rem; // Размер шрифта английского названия
+            margin: 0; // Убираем отступы
+            font-style: italic; // Курсивное начертание
+            width: 100%; // Ширина английского названия
+            overflow: hidden; // Скрытие переполнения
+            text-overflow: ellipsis; // Обрезка текста
+            white-space: nowrap; // Запрет переноса строк
+        }
+
+        .learn-more {
+            width: 100%; // Ширина кнопки
+            margin-top: auto; // Отступ сверху кнопки
+            padding: 10px 16px; // Внутренние отступы кнопки
+            font-size: 1rem; // Размер шрифта кнопки
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr); // Количество колонок для экранов до 1200px
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-grid {
+        grid-template-columns: 1fr; // Количество колонок для экранов до 768px
+        gap: 20px; // Отступы между карточками для экранов до 768px
+
+        .plant-card {
+            max-width: 400px; // Максимальная ширина карточки для экранов до 768px
+            margin: 0 auto; // Центрирование карточки для экранов до 768px
+            
+            .img_container {
+                height: 250px; // Высота контейнера изображения для экранов до 768px
+            }
+        }
+    }
+
+    .catalog-container {
+        padding: 10px; // Внутренние отступы контейнера для экранов до 768px
+        
+        .sidebar {
+            margin-bottom: 20px; // Отступ снизу сайдбара для экранов до 768px
+            
+            .category-group {
+                padding: 15px; // Внутренние отступы группы категорий для экранов до 768px
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-grid {
+        .plant-card {
+            padding: 12px; // Внутренние отступы карточки для экранов до 480px
+            
+            .img_container {
+                height: 200px; // Высота контейнера изображения для экранов до 480px
+            }
+            
+            h3 {
+                font-size: 1.1rem; // Размер шрифта заголовка карточки для экранов до 480px
+            }
+            
+            .english-name {
+                font-size: 0.8rem; // Размер шрифта английского названия для экранов до 480px
+            }
+            
+            .learn-more {
+                padding: 8px 12px; // Внутренние отступы кнопки для экранов до 480px
+                font-size: 0.9rem; // Размер шрифта кнопки для экранов до 480px
+            }
+        }
+    }
+}
+
+// Responsive styles for catalog page
+@media (max-width: 1024px) {
+    .catalog-container {
+        flex-direction: column; // Направление флексбокса
+
+        .sidebar {
+            width: 100%; // Ширина сайдбара
+            margin-bottom: 30px; // Отступ снизу сайдбара
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 48px; // Размер шрифта заголовка
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); // Количество колонок
+    }
+}
+
+// Catalog sidebar styles
+.sidebar {
+    width: 250px; // Ширина сайдбара
+    flex-shrink: 0; // Запрет сжатия сайдбара
+
+    .categories {
+        border: 1px solid rgba($color-text, 0.2); // Граница категорий
+        border-radius: 8px; // Скругление углов категорий
+
+        .category-group {
+            padding: 20px; // Внутренние отступы группы категорий
+
+            .category-item {
+                margin-bottom: 15px; // Отступ снизу элемента категории
+
+                &:last-child {
+                    margin-bottom: 0; // Убираем отступ снизу последнего элемента категории
+                }
+
+                .category-header {
+                    display: block; // Блочное отображение заголовка категории
+                    color: $color-text; // Цвет заголовка категории
+                    font-size: 16px; // Размер шрифта заголовка категории
+                    margin-bottom: 8px; // Отступ снизу заголовка категории
+                    cursor: pointer; // Курсор при наведении
+                    position: relative; // Позиционирование заголовка категории
+                    padding-right: 20px; // Внутренний отступ справа заголовка категории
+                    animation: fadeInUp 1s ease-in-out; // Анимация появления заголовка категории
+
+                    &::after {
+                        content: '+'; // Содержимое псевдоэлемента
+                        position: absolute; // Позиционирование псевдоэлемента
+                        right: 0; // Выравнивание псевдоэлемента по правому краю
+                        top: 50%; // Выравнивание псевдоэлемента по вертикали
+                        transform: translateY(-50%); // Перемещение псевдоэлемента
+                    }
+
+                    &.active::after {
+                        content: '-'; // Содержимое псевдоэлемента активного заголовка категории
+                    }
+                }
+
+                ul {
+                    list-style: none; // Убираем маркеры списка
+                    padding-left: 15px; // Внутренний отступ слева списка
+                    margin: 0; // Убираем отступы списка
+
+                    li {
+                        color: $color-text-light; // Цвет элемента списка
+                        font-size: 14px; // Размер шрифта элемента списка
+                        padding: 4px 0; // Внутренние отступы элемента списка
+                        cursor: pointer; // Курсор при наведении
+                        animation: fadeInUp 1s ease-in-out; // Анимация появления элемента списка
+
+                        &.active {
+                            color: $color-accent; // Цвет активного элемента списка
+                            font-weight: 500; // Толщина шрифта активного элемента списка
+                        }
+
+                        &:hover {
+                            color: $color-text; // Цвет элемента списка при наведении
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Product card styles
+.products-grid {
+    .product-card {
+        .product-info {
+            min-height: 150px; // Минимальная высота информации о продукте
+            display: flex; // Флексбокс для информации о продукте
+            flex-direction: column; // Направление флексбокса
+            justify-content: space-between; // Распределение содержимого по высоте
+            align-items: center; // Центрирование содержимого по горизонтали
+            padding: 15px; // Внутренние отступы информации о продукте
+            animation: fadeInUp 1s ease-in-out; // Анимация появления информации о продукте
+
+            h2 {
+                margin: 0 0 5px; // Отступы заголовка информации о продукте
+                text-align: center; // Центрирование текста заголовка информации о продукте
+            }
+
+            .latin-name {
+                margin: 0 0 15px; // Отступы латинского названия
+                text-align: center; // Центрирование текста латинского названия
+            }
+        }
+    }
+}
+
+// Product Detail Page Styles
+.product-detail {
+    display: flex; // Флексбокс для деталей продукта
+    gap: 50px; // Отступы между элементами деталей продукта
+    max-width: 1440px; // Максимальная ширина деталей продукта
+    width: 90%; // Ширина деталей продукта
+    margin: 50px auto; // Отступы деталей продукта
+    padding: 30px; // Внутренние отступы деталей продукта
+    border-radius: 10px; // Скругление углов деталей продукта
+    animation: fadeInUp 1s ease-in-out; // Анимация появления деталей продукта
+
+    .product-image {
+        flex: 1; // Гибкость изображения продукта
+        max-width: 500px; // Максимальная ширина изображения продукта
+        background-color: $color-background; // Цвет фона изображения продукта
+        padding: 10px; // Внутренние отступы изображения продукта
+        border-radius: 20px; // Скругление углов изображения продукта
+        display: flex; // Флексбокс для изображения продукта
+        justify-content: center; // Центрирование содержимого по горизонтали
+        object-fit: cover; // Масштабирование изображения продукта
+        align-items: center; // Центрирование содержимого по вертикали
+        animation: zoomIn 1s ease-in-out; // Анимация появления изображения продукта
+
+        img {
+            width: 100%; // Ширина изображения
+            height: auto; // Высота изображения
+            border-radius: 10px; // Скругление углов изображения
+        }
+    }
+
+    .product-info {
+        flex: 1; // Гибкость информации о продукте
+
+        h1 {
+            font-family: "Amatic SC", cursive; // Шрифт заголовка информации о продукте
+            color: #6B5F51; // Цвет заголовка информации о продукте
+            font-size: 64px; // Размер шрифта заголовка информации о продукте
+            margin: 0 0 10px 0; // Отступы заголовка информации о продукте
+            animation: slideInLeft 1s ease-in-out; // Анимация появления заголовка информации о продукте
+        }
+
+        .latin-name {
+            color: $color-accent; // Цвет латинского названия
+            font-size: 24px; // Размер шрифта латинского названия
+            margin: 0 0 30px 0; // Отступы латинского названия
+            font-weight: normal; // Толщина шрифта латинского названия
+            animation: slideInRight 1s ease-in-out; // Анимация появления латинского названия
+        }
+    }
+}
+
+.description {
+    margin-bottom: 40px; // Отступ снизу описания
+
+    p {
+        color: $color-text; // Цвет текста описания
+        font-size: 18px; // Размер шрифта описания
+        line-height: 1.6; // Межстрочный интервал описания
+        animation: fadeInUp 1s ease-in-out; // Анимация появления описания
+    }
+}
+
+.care-details {
+    // Styles for care details
+}
+
+.care-section {
+    h3 {
+        color: #5F5148; // Цвет заголовка раздела ухода
+        font-size: 20px; // Размер шрифта заголовка раздела ухода
+        font-weight: 700; // Толщина шрифта заголовка раздела ухода
+        line-height: normal; // Межстрочный интервал заголовка раздела ухода
+        letter-spacing: 0.4px; // Межбуквенный интервал заголовка раздела ухода
+        animation: slideInLeft 1s ease-in-out; // Анимация появления заголовка раздела ухода
+    }
+
+    p {
+        color: #5F5148; // Цвет текста раздела ухода
+        font-size: 16px; // Размер шрифта текста раздела ухода
+        font-weight: 400; // Толщина шрифта текста раздела ухода
+        line-height: 25px; // Межстрочный интервал текста раздела ухода
+        letter-spacing: 0.32px; // Межбуквенный интервал текста раздела ухода
+        text-transform: uppercase; // Заглавные буквы
+        animation: slideInRight 1s ease-in-out; // Анимация появления текста раздела ухода
+    }
+}
+
+
+.breadcrumbs {
+    max-width: 1440px; // Максимальная ширина контейнера
+    width: 90%; // Ширина контейнера
+    margin: 20px auto; // Отступы контейнера
+    color: $color-accent; // Цвет текста
+
+    a {
+        color: $color-text; // Цвет ссылок
+        text-decoration: none; // Убираем подчеркивание ссылок
+
+        &:hover {
+            text-decoration: underline; // Подчеркивание ссылок при наведении
+        }
+    }
+}
+
+// Error message styles
+.error-message {
+    text-align: center; // Центрирование текста
+    padding: 50px; // Внутренние отступы
+
+    h2 {
+        color: #6B5F51; // Цвет заголовка сообщения об ошибке
+        font-size: 32px; // Размер шрифта заголовка сообщения об ошибке
+        margin-bottom: 20px; // Отступ снизу заголовка сообщения об ошибке
+        animation: fadeInUp 1s ease-in-out; // Анимация появления заголовка сообщения об ошибке
+    }
+
+    p {
+        color: $color-accent; // Цвет текста сообщения об ошибке
+        margin-bottom: 30px; // Отступ снизу текста сообщения об ошибке
+        animation: fadeInUp 1s ease-in-out; // Анимация появления текста сообщения об ошибке
+    }
+
+    .button {
+        display: inline-block; // Блочное отображение кнопки
+        text-decoration: none; // Убираем подчеркивание кнопки
+        color: $color-white; // Цвет текста кнопки
+        background-color: $color-text; // Цвет фона кнопки
+        padding: 12px 32px; // Внутренние отступы кнопки
+        border-radius: 10px; // Скругление углов кнопки
+        font-size: 18px; // Размер шрифта кнопки
+        animation: fadeInUp 1s ease-in-out; // Анимация появления кнопки
+    }
+}
+
+// Responsive styles
+@media (max-width: 1024px) {
+    .product-detail {
+        flex-direction: column; // Направление флексбокса
+
+        .product-image {
+            max-width: 100%; // Максимальная ширина изображения продукта
+        }
+    }
+
+    .care-details {
+        grid-template-columns: 1fr; // Количество колонок
+    }
+}
+
+.about-section {
+    padding: 60px 0; // Внутренние отступы раздела "О нас"
+    background-color: $color-hero-bg; // Цвет фона раздела "О нас"
+    animation: fadeInUp 1s ease-in-out; // Анимация появления раздела "О нас"
+
+    .about-content {
+        display: flex; // Флексбокс для содержимого раздела "О нас"
+        gap: 60px; // Отступы между элементами содержимого раздела "О нас"
+        align-items: center; // Центрирование содержимого по вертикали
+        max-width: 1440px; // Максимальная ширина содержимого раздела "О нас"
+        width: 90%; // Ширина содержимого раздела "О нас"
+        margin: 0 auto; // Центрирование содержимого раздела "О нас"
+
+        .about-text {
+            flex: 1; // Гибкость текста раздела "О нас"
+
+            h1 {
+                font-family: $font-secondary; // Шрифт заголовка раздела "О нас"
+                color: $color-accent-dark; // Цвет заголовка раздела "О нас"
+                font-size: 64px; // Размер шрифта заголовка раздела "О нас"
+                margin-bottom: 40px; // Отступ снизу заголовка раздела "О нас"
+                letter-spacing: 1.28px; // Межбуквенный интервал заголовка раздела "О нас"
+                animation: slideInLeft 1s ease-in-out; // Анимация появления заголовка раздела "О нас"
+            }
+
+            p {
+                color: $color-text; // Цвет текста раздела "О нас"
+                font-size: 18px; // Размер шрифта текста раздела "О нас"
+                line-height: 1.6; // Межстрочный интервал текста раздела "О нас"
+                margin-bottom: 24px; // Отступ снизу текста раздела "О нас"
+                animation: fadeInUp 1s ease-in-out; // Анимация появления текста раздела "О нас"
+            }
+
+            .join-us {
+                margin-top: 40px; // Отступ сверху блока "Присоединяйтесь к нам"
+                padding: 30px; // Внутренние отступы блока "Присоединяйтесь к нам"
+                background-color: $color-background; // Цвет фона блока "Присоединяйтесь к нам"
+                border-radius: 10px; // Скругление углов блока "Присоединяйтесь к нам"
+                animation: zoomIn 1s ease-in-out; // Анимация появления блока "Присоединяйтесь к нам"
+
+                p {
+                    font-family: $font-secondary; // Шрифт текста блока "Присоединяйтесь к нам"
+                    font-size: 24px; // Размер шрифта текста блока "Присоединяйтесь к нам"
+                    color: $color-accent-dark; // Цвет текста блока "Присоединяйтесь к нам"
+                    margin: 0; // Убираем отступы текста блока "Присоединяйтесь к нам"
+                    text-align: center; // Центрирование текста блока "Присоединяйтесь к нам"
+                }
+            }
+        }
+
+        .about-image {
+            flex: 1; // Гибкость изображения раздела "О нас"
+            max-width: 600px; // Максимальная ширина изображения раздела "О нас"
+
+            img {
+                width: 100%; // Ширина изображения
+                height: auto; // Высота изображения
+                border-radius: 10px; // Скругление углов изображения
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Тень изображения
+                animation: zoomIn 1s ease-in-out; // Анимация появления изображения
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-section {
+        .about-content {
+            flex-direction: column; // Направление флексбокса
+
+            .about-image {
+                max-width: 100%; // Максимальная ширина изображения
+                order: -1; // Порядок изображения
+            }
+        }
+    }
+}
+
+// Анимации
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .two_block {
+        margin: 40px auto;
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .container_card {
+            flex-direction: column;
+            gap: 30px;
+
+            .card {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+
+                .card_img {
+                    height: 300px;
+                }
+
+                .card_desc {
+                    padding: 20px;
+
+                    h2 {
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .three_block {
+        margin: 60px 0;
+        padding: 40px 0;
+
+        .container_compo {
+            flex-direction: column;
+            text-align: center;
+                    img{
+                        width: 100%;
+                    }
+            > div {
+                width: 100%;
+
+                h1 {
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .container_card {
+                flex-direction: column;
+                gap: 30px;
+
+                .card {
+                    width: 100%;
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .five_block {
+        margin: 40px 0;
+        padding: 40px 0;
+        background-position: center bottom;
+        background-size: 100% auto;
+
+        .container_cactus {
+            text-align: center;
+
+            h1 {
+                font-size: 36px;
+                margin-bottom: 30px;
+            }
+
+            .container_card_why {
+                flex-direction: column;
+                gap: 30px;
+
+                .card_why {
+                    width: 100%;
+                    max-width: 300px;
+                    margin: 0 auto;
+
+                    img {
+                        width: 120px;
+                        height: 120px;
+                        margin-bottom: 15px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .six_block {
+        padding: 40px 0;
+
+        .slider-header {
+            text-align: center;
+            margin-bottom: 30px;
+
+            h1 {
+                font-size: 36px;
+            }
+        }
+
+        .slider-container {
+            .slider-wrapper {
+                margin: 0 20px;
+            }
+
+            .slider-slide {
+                img {
+                    height: 250px;
+                }
+            }
+
+            .slider-button {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .one_block {
+        .main_container {
+            div {
+                h1 {
+                    font-size: 36px;
+                }
+
+                h2 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .two_block,
+    .three_block,
+    .five_block,
+    .six_block {
+        h1 {
+            font-size: 32px;
+        }
+    }
+
+    .slider-container {
+        .slider-slide {
+            img {
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .one_block {
+        background-size: 600px;
+        min-height: 500px;
+
+        .main_container {
+            div {
+                max-width: 600px;
+
+                h1 {
+                    font-size: 56px;
+                    margin-bottom: 20px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .one_block {
+        background-size: 400px;
+        background-position: right bottom -50px;
+        padding: 60px 0px;
+        text-align: center;
+        
+
+        .main_container {
+            div {
+                margin: 0 auto;
+
+                h1 {
+                    font-size: 42px;
+                    letter-spacing: 1px;
+                    margin-bottom: 20px;
+                }
+
+                h2 {
+                    font-size: 16px;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            button {
+                padding: 12px 30px;
+                font-size: 18px;
+            }
+        }
+    }
+    .five_block{
+        height: 1000px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .one_block {
+        background-size: 300px;
+        background-position: right bottom -30px;
+        padding: 40px 0px;
+
+        .main_container {
+            div {
+                h1 {
+                    font-size: 36px;
+                    margin-bottom: 15px;
+                }
+
+                h2 {
+                    font-size: 14px;
+                    margin-bottom: 25px;
+                }
+            }
+
+            button {
+                padding: 10px 25px;
+                font-size: 16px;
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-button {
+        display: none !important;
+    }
+}
+}
